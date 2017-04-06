@@ -22,10 +22,38 @@ output <-CompareLength(a,b)
 # "Your first vector is longer by N elements"
 # "Your second vector is longer by N elements"
 
+DescribeDifference <- function(A,B) {
+  if(length(A) > length(B)) {
+    return(paste("Your first vector is longer by ", length(A) - length(B), "elements"))
+  } else {
+    return(paste("Your second vector is longer by ", length(B) - length(A), "elements"))
+  }
+}
 
 # Pass two vectors to your `DescribeDifference` function
 
+a <- c(1:100)
+b <- c(1:99)
+
+output2 <- DescribeDifference(a,b)
 
 ### Bonus ###
 
 # Rewrite your `DescribeDifference` function to tell you the name of the vector which is longer
+
+DescribeDifference2 <- function(A,B) {
+  if(length(A) > length(B)) {
+    return(paste(substitute(A)," is longer by ", length(A) - length(B), "elements"))
+  } else {
+    return(paste(substitute(A), " is longer by ", length(B) - length(A), "elements"))
+  }
+}
+
+a <- c(1:100)
+b <- c(1:99)
+
+output3 <- DescribeDifference2(a,b)
+
+
+
+
