@@ -43,9 +43,9 @@ output2 <- DescribeDifference(a,b)
 
 DescribeDifference2 <- function(A,B) {
   if(length(A) > length(B)) {
-    return(paste0(deparse(substitute(A))," is longer by ", abs(length(A) - length(B)), "elements"))
+    return(paste0(deparse(substitute(A))," is longer by ", abs(length(A) - length(B)), " elements"))
   } else {
-    return(paste0(deparse(substitute(A)), " is longer by ", abs(length(A) - length(B)), "elements"))
+    return(paste0(deparse(substitute(A)), " is longer by ", abs(length(A) - length(B)), " elements"))
   }
 }
 
