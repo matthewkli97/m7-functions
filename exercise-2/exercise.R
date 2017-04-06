@@ -6,7 +6,7 @@
 CompareLength <- function(A,B) {
   diff <- abs(length(A) - length(B))
   output <- "The difference in lengths is "
-  return (paste(output, diff))
+  return (paste0(output, diff))
 }
 
 
@@ -24,9 +24,9 @@ output <-CompareLength(a,b)
 
 DescribeDifference <- function(A,B) {
   if(length(A) > length(B)) {
-    return(paste("Your first vector is longer by ", length(A) - length(B), "elements"))
+    return(paste0("Your first vector is longer by ", length(A) - length(B), "elements"))
   } else {
-    return(paste("Your second vector is longer by ", length(B) - length(A), "elements"))
+    return(paste0("Your second vector is longer by ", length(B) - length(A), "elements"))
   }
 }
 
@@ -43,9 +43,9 @@ output2 <- DescribeDifference(a,b)
 
 DescribeDifference2 <- function(A,B) {
   if(length(A) > length(B)) {
-    return(paste(substitute(A)," is longer by ", length(A) - length(B), "elements"))
+    return(paste0(substitute(A)," is longer by ", abs(length(A) - length(B)), "elements"))
   } else {
-    return(paste(substitute(A), " is longer by ", length(B) - length(A), "elements"))
+    return(paste0(substitute(A), " is longer by ", abs(length(A) - length(B)), "elements"))
   }
 }
 
